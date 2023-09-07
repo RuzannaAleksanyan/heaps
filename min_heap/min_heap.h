@@ -10,7 +10,7 @@ private:
 public:
 	min_heap(int capacity);
 
-  ~min_heap();
+  	~min_heap();
 
 	void min_heapify(int);
 
@@ -30,7 +30,7 @@ public:
 
 	void insert_key(int k);
 
-  bool empty();
+  	bool empty();
 
 };
 
