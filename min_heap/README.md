@@ -11,7 +11,7 @@ This is a C++ implementation of a Min Heap data structure. A Min Heap is a binar
 To use this Min Heap implementation in your C++ project, follow these steps:
 1. Clone the repository or download the source code.
 2. Include the `min_heap.h` header in your project where you want to use the Min Heap class.
-3. Implement a test function or use the provided example (as shown in `main.cpp`) to test the functionality of the Min Heap.
+3. Implement a test function or use the provided example (as shown in `test.cpp`) to test the functionality of the Min Heap.
 4. Compile your project, linking the Min Heap source files, to create an executable.
 
 ## Usage
