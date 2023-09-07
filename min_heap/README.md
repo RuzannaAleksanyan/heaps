@@ -27,7 +27,7 @@ Creates a new Min Heap with the specified capacity.
 - bool empty(): Checks if the Min Heap is empty.
 
 ## Example
-You can find a usage example in the main.cpp file included in this repository. It demonstrates how to create a Min Heap, insert elements, extract the minimum element, and perform other operations.
+You can find a usage example in the test.cpp file included in this repository. It demonstrates how to create a Min Heap, insert elements, extract the minimum element, and perform other operations.
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
