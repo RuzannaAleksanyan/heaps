@@ -10,7 +10,7 @@ private:
 public:
 	max_heap(int capacity);
 
-    ~max_heap();
+        ~max_heap();
 
 	void max_heapify(int);
 
@@ -30,7 +30,7 @@ public:
 
 	void insert_key(int k);
 
-    bool emprty();
+        bool emprty();
 };
 
 #endif
