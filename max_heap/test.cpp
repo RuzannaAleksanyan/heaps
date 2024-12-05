@@ -35,7 +35,7 @@ int main() {
     std::cout << "Maximum element after deletion: " << heap.get_max() << std::endl;
 
     // Check if the heap is empty
-    if (heap.emprty()) {
+    if (heap.empty()) {
         std::cout << "Heap is empty." << std::endl;
     } else {
         std::cout << "Heap is not empty." << std::endl;

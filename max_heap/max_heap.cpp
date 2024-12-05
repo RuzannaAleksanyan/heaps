@@ -13,30 +13,29 @@ max_heap::~max_heap() {
 	delete m_arr;
 }
 
-void swap(int* x, int* y)
-{
+void swap(int* x, int* y) {
 	int temp = *x;
 	*x = *y;
 	*y = temp;
 }
 
 void max_heap::max_heapify(int i) {
-	int l = left(i);
-	int r = right(i);
-	int smollest = i;
-	
-	if(l < m_size && m_arr[l] > m_arr[i]) {
-		smollest = l;
-	}
-	
-	if(r < m_size && m_arr[r] > m_arr[smollest]) {
-		smollest = r;
-	}
-	
-	if(smollest != i) {
-		swap(&m_arr[smollest], &m_arr[i]);
-		max_heapify(smollest);
-	}
+    int l = left(i);
+    int r = right(i);
+    int largest = i;
+
+    if (l < m_size && m_arr[l] > m_arr[i]) {
+        largest = l;
+    }
+
+    if (r < m_size && m_arr[r] > m_arr[largest]) {
+        largest = r;
+    }
+
+    if (largest != i) {
+        swap(&m_arr[largest], &m_arr[i]);
+        max_heapify(largest);
+    }
 }
 
 int max_heap::parent(int i) {
@@ -44,11 +43,11 @@ int max_heap::parent(int i) {
 }
 
 int max_heap::left(int i) {
-    	return 2 * i + 1;
+    return 2 * i + 1;
 }
 
 int max_heap::right(int i) {
-    	return 2 * i + 2;
+    return 2 * i + 2;
 }
 
 int max_heap::extract_max() {
@@ -77,23 +76,23 @@ void max_heap::decrease_key(int i, int new_val) {
 }
 
 int max_heap::get_max() {
-    	return m_arr[0];
+    return m_arr[0];
 }
 
 void max_heap::delete_key(int i) {
-    	decrease_key(i, INT_MAX);
+    decrease_key(i, INT_MAX);
 	extract_max();
 }
 
 void max_heap::insert_key(int k) {
-	if (m_size == m_capacity) {
+	if (m_size >= m_capacity) {
 		std::cout << "\nOverflow: Could not insertKey\n";
 		return;
 	}
 	
-	m_size++;
-	int i = m_size - 1;
+	int i = m_size;
 	m_arr[i] = k;
+	m_size++;
 	
 	while (i != 0 && m_arr[parent(i)] < m_arr[i]) {
 		swap(&m_arr[i], &m_arr[parent(i)]);
@@ -101,6 +100,6 @@ void max_heap::insert_key(int k) {
 	}
 }
 
-bool max_heap::emprty() {
-    	return m_size == 0;
+bool max_heap::empty() {
+    return m_size == 0;
 }
